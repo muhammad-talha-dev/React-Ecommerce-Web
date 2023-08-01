@@ -1,0 +1,23 @@
+#banner{
+  background-image: url('./assets/banner.png');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+#banner-textbox{
+  height: 60vh;
+}
+
+.card-img{
+  object-fit: cover;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transform: scale(1.1);
+}
+
+.card-img:hover{
+  /* transform: scaleX(1.4) scaleY(1.1); */
+  opacity: 30%;
+}
