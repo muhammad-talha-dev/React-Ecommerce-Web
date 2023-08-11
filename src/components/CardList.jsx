@@ -3,15 +3,24 @@ import axios from 'axios';
 import '../App.css'
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
+import { Link } from 'react-router-dom';
 
 const GameCard = ({ game }) => {
   return (
-    <Card style={{ width: '18rem', backgroundColor: '#32383e', borderRadius: '2px', overflow: 'hidden' }}>
-      <Card.Img className='card-img' variant="top" src={game.thumbnail} alt={game.title} style={{ objectFit: 'cover' }} />
-      <Card.Body>
-        <Card.Title className='text-white-50'>{game.title}</Card.Title>
-      </Card.Body>
-    </Card>
+    <div className='col d-flex justify-content-center gap-5'>
+
+    <Link className='text-decoration-none' to={`/game/${game.id}`}>
+
+      <Card style={{ width: '18rem', backgroundColor: '#32383e', borderRadius: '2px', height: '250px' }}>
+        <Card.Img className='card-img' variant="top" src={game.thumbnail} alt={game.title} style={{ objectFit: 'cover' }} />
+        <Card.Body>
+          <Card.Title className='text-white-50'>{game.title}</Card.Title>
+        </Card.Body>
+      </Card>
+
+    </Link>
+
+    </div>
   );
 };
 
@@ -45,9 +54,9 @@ const CardList = () => {
   return (
     <div className="card-list">
         <Row className="d-flex justify-content-center gap-4">
-          {games.map((game) => (
-            <GameCard key={game.id} game={game} />
-          ))}
+            {games.map((game) => (
+                <GameCard key={game.id} game={game} />
+            ))}
         </Row>
     </div>
   );

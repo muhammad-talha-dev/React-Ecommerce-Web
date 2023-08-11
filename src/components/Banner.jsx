@@ -1,5 +1,7 @@
 import React from 'react'
 import '../App.css'
+import { Link } from 'react-router-dom'
+// import Games from '../pages/Games'
 
 function Banner() {
   return (
@@ -10,8 +12,8 @@ function Banner() {
                         <h1 className='pb-1'>Discover the best free-to-play games!</h1>
                         <h5>Track what you've played and search for what to play next! Plus get free premium loot!</h5>
                         <div>
-                            <button className='btn btn-primary me-3 my-3'>GET STARTED</button>
-                            <button className='btn btn-outline-light'>BROWSE GAMES</button>
+                            <Link className='btn btn-primary me-3 my-3' to={'/signup'}>GET STARTED</Link>
+                            <Link className='btn btn-outline-light' to={'/games'}>BROWSE GAMES</Link>
                         </div>
                     </div>
                 </div>

@@ -8,13 +8,11 @@ function Home() {
 
   return (
     <div className='pt-5' style={{ backgroundColor: '#272b30'}}>
-      <WebHeader /> 
 
       <div className='container py-5'>
         <AllGames />
       </div>
       
-      <Footer />
     </div>
   )
 }
